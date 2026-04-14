@@ -19,13 +19,13 @@ const data = [
 const HowItWorks = () => {
     return (
         <div className=" w-full mt-5 px-10">
-          <h1 className="text-[var(--primary)] text-center text-[30px] font-[900]">How It Works</h1>
+          <h1 className="text-[var(--primary)] text-center text-[30px] font-[900]">Get Started With EDUSCRIBE</h1>
 
           {/* Work Roadmap  */}
           <div className="flex flex-col gap-2 md:flex-row">
            {data.map((item, index) => (
            
-            <div key={index} className="flex flex-row gap-2 h-[60px]">
+            <div key={index} className="flex flex-row gap-2 h-[60px] md:flex-col">
               <div className="bg-[var(--primary)] w-8 h-8 rounded-full 
                 flex items-center justify-center text-white font-[600] flex-shrink-0 text-[14px]"
               >
