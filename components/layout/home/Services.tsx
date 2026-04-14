@@ -37,8 +37,8 @@ const Services = () => {
                     </div>
 
                     <div className="mt-2">
-                      <h1 className="text-[20px] font-[600] text-[var(--primary)]">{service.title}</h1>
-                      <p className="text-[12px] text-slate-600">{service.description}</p>
+                      <h1 className="text-[20px] md:text-[16px] font-[600] text-[var(--primary)]">{service.title}</h1>
+                      <p className="text-[12px] md:mt-1 text-slate-600">{service.description}</p>
                     </div>
                 </div>
             ))}
