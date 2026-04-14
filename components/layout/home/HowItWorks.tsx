@@ -18,23 +18,23 @@ const data = [
 
 const HowItWorks = () => {
     return (
-        <div className=" w-full mt-5 px-10">
-          <h1 className="text-[var(--primary)] text-center text-[30px] font-[900]">Get Started With EDUSCRIBE</h1>
+        <div className=" w-full mt-5 px-5">
+          <h1 className="text-[var(--primary)] text-center text-[27px] font-[900]">Get Started With EDUSCRIBE</h1>
 
           {/* Work Roadmap  */}
-          <div className="flex flex-col gap-2 md:flex-row">
+          <div className="flex flex-col gap-2 md:flex-row mt-5 md:mx-auto mx-auto">
            {data.map((item, index) => (
            
             <div key={index} className="flex flex-row gap-2 h-[60px] md:flex-col">
-              <div className="bg-[var(--primary)] w-8 h-8 rounded-full 
-                flex items-center justify-center text-white font-[600] flex-shrink-0 text-[14px]"
+              <div className="bg-[var(--primary)] w-5 h-5 rounded-full 
+                flex items-center justify-center text-white font-[600] flex-shrink-0 text-[10px]"
               >
                 {item.number}
               </div>
 
               <div>
-                <h1 className="text-[12px] font-[700] text-[var(--primary)]">{item.title}</h1>
-                <p className="text-[10px]">{item.description}</p>                
+                <h1 className="text-[15px] font-[700] text-[var(--primary)]">{item.title}</h1>
+                <p className="text-[11px]">{item.description}</p>                
               </div>
             </div>
            ))}
