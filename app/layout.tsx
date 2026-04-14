@@ -11,7 +11,7 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
   title: "Eduscribe",
-  description: "Empowering learners,writers adn researchers to connect on the same platform ",
+  description: "Empowering learners,writers and researchers to connect on the same platform",
 };
 
 export default function RootLayout({
