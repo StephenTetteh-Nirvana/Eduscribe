@@ -18,7 +18,7 @@ const data = [
 
 const HowItWorks = () => {
   return (
-    <div className=" w-full mt-15 px-3 md:pl-10 py-5 h-[60vh]">
+    <div className=" w-full mt-15 px-3 md:pl-10 py-5">
       <h1 className="text-[var(--primaryTheme)] text-center text-[27px] lg:text-[40px] md:text-[35px] font-[900]">Get Started With EDUSCRIBE</h1>
 
       {/* Work Roadmap  */}
