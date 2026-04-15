@@ -5,17 +5,13 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
   useCarousel
 } from "@/components/ui/carousel"
-import { MoveLeft, MoveRight } from "lucide-react";
 import { Button } from "../ui/button";
-import useEmblaCarousel from "embla-carousel-react";
 
 const Testimonials = () => {
-  const [ emblaRef,emblaApi ] = useEmblaCarousel()
-
-  const scrollPrev = () => emblaApi?.scrollPrev()
-  const scrollNext = () => emblaApi?.scrollNext()
 
   return (
     <div className="mt-15 flex flex-col items-center justify-center">
@@ -26,14 +22,14 @@ const Testimonials = () => {
 
       <Carousel className="w-[90%] py-5">
 
-        {/* Custom Carousel Buttons  */}
-        <div ref={emblaRef} className="flex flex-row gap-2 items-end justify-end">
-            <Button className="cursor-pointer" onClick={scrollPrev}>
-              <MoveLeft size={20} />
+        {/* Carousel Buttons  */}
+        <div className="absolute z-50 flex flex-row gap-2 items-end justify-end">
+            <Button className="cursor-pointer">
+              <CarouselPrevious/>
             </Button>
 
-            <Button className="cursor-pointer" onClick={scrollNext}>
-              <MoveRight size={20}/>
+            <Button className="cursor-pointer">
+              <CarouselNext/>
             </Button>
         </div>
 
