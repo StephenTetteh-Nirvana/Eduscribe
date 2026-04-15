@@ -1,34 +1,40 @@
+'use client'
+
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+  useCarousel
 } from "@/components/ui/carousel"
 import { MoveLeft, MoveRight } from "lucide-react";
+import { Button } from "../ui/button";
+import useEmblaCarousel from "embla-carousel-react";
 
 const Testimonials = () => {
+  const [ emblaRef,emblaApi ] = useEmblaCarousel()
+
+  const scrollPrev = () => emblaApi?.scrollPrev()
+  const scrollNext = () => emblaApi?.scrollNext()
+
   return (
     <div className="mt-15 flex flex-col items-center justify-center">
 
       {/* Heading   */}
-      <h1 className="text-[var(--primaryTheme)] font-[900] lg:text-[40px] md:text-[35px]">What Our Clients Say About Us</h1>
+      <h1 className="text-[var(--primaryTheme)] font-[900] text-[27px] lg:text-[40px] md:text-[35px]">What Our Clients Say About Us</h1>
 
 
       <Carousel className="w-[90%] py-5">
 
         {/* Custom Carousel Buttons  */}
-        <div className="flex flex-row gap-2 items-end justify-end">
-            <div className="cursor-pointer">
+        <div ref={emblaRef} className="flex flex-row gap-2 items-end justify-end">
+            <Button className="cursor-pointer" onClick={scrollPrev}>
               <MoveLeft size={20} />
-            </div>
+            </Button>
 
-            <div className="cursor-pointer">
+            <Button className="cursor-pointer" onClick={scrollNext}>
               <MoveRight size={20}/>
-            </div>
-          {/* <CarouselPrevious />
-          <CarouselNext /> */}
+            </Button>
         </div>
 
         <CarouselContent className="-ml-1">
