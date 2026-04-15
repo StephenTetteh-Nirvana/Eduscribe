@@ -9,12 +9,11 @@ import {
   CarouselPrevious,
   useCarousel
 } from "@/components/ui/carousel"
-import { Button } from "../ui/button";
 
 const Testimonials = () => {
 
   return (
-    <div className="relative mt-30 py-5 flex flex-col items-center justify-center">
+    <div className="relative mt-15 md:mt-30 py-5 flex flex-col items-center justify-center">
 
       {/* Heading   */}
       <h1 className="text-[var(--primaryTheme)] font-[900] text-[27px] lg:text-[40px] md:text-[35px]">What Our Clients Say About Us</h1>
