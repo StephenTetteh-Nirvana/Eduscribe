@@ -14,23 +14,21 @@ import { Button } from "../ui/button";
 const Testimonials = () => {
 
   return (
-    <div className="mt-15 flex flex-col items-center justify-center">
+    <div className="relative mt-30 py-5 flex flex-col items-center justify-center">
 
       {/* Heading   */}
       <h1 className="text-[var(--primaryTheme)] font-[900] text-[27px] lg:text-[40px] md:text-[35px]">What Our Clients Say About Us</h1>
-
-
-      <Carousel className="w-[90%] py-5">
+  
+      <Carousel className="w-[90%] py-5 mt-5">
 
         {/* Carousel Buttons  */}
-        <div className="absolute z-50 flex flex-row gap-2 items-end justify-end">
-            <Button className="cursor-pointer">
-              <CarouselPrevious/>
-            </Button>
-
-            <Button className="cursor-pointer">
-              <CarouselNext/>
-            </Button>
+        <div className="absolute right-10 top-1 z-50 flex">
+          <CarouselPrevious 
+            className="border border-slate-300 hover:border hover:border-[var(--accentTheme)] cursor-pointer"
+          />
+          <CarouselNext 
+            className="border border-slate-300 hover:border hover:border-[var(--accentTheme)] cursor-pointer"
+          />
         </div>
 
         <CarouselContent className="-ml-1">
@@ -40,14 +38,13 @@ const Testimonials = () => {
                 <Card className="rounded-md ring-0 bg-[var(--backgroundTheme)]">
                   <CardContent className="px-5 py-2">
                     {/* Client Image  */}
-                    <div className="w-15 h-15 mx-auto rounded-full border border-slate-400">
-                        
-                    </div>
+                    <div className="w-15 h-15 mx-auto rounded-full border border-slate-400"></div>
                     
                     {/* Client Feedback  */}
-                    <p className="w-full mt-3"> “ I was honestly overwhelmed with my coursework, but their team completely changed the experience for me. 
-                        The quality of writing was exceptional, everything was delivered on time. 
-                        I wouldn’t hesitate to recommend their services to anyone needing reliable academic support.”
+                    <p className="w-full mt-3"> 
+                      “ I was honestly overwhelmed with my coursework, but their team completely changed the experience for me. 
+                      The quality of writing was exceptional, everything was delivered on time. 
+                      I wouldn’t hesitate to recommend their services to anyone needing reliable academic support.”
                     </p>
                     
                     {/* Client Details  */}
