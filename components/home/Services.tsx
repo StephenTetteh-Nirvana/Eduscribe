@@ -26,7 +26,7 @@ const services = [
 const Services = () => {
   return (
     <div className="mt-15 py-5 md:px-10 w-full">
-      <h1 className="text-[32px] lg:text-[40px] md:text-[35px] text-center font-[900] text-[var(--accent)]">What We Offer</h1>
+      <h1 className="text-[32px] lg:text-[40px] md:text-[35px] text-center font-[900] text-[var(--primary)]">What We Offer</h1>
       
       {/* Services Cards  */}
       <section className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-5 px-5 mx-auto md:px-3">
