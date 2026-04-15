@@ -50,7 +50,7 @@ const PaymentSubscription = () => {
         <h1 className="text-[var(--primaryTheme)] text-center text-[27px] lg:text-[40px] md:text-[35px] font-[900]">Choose Your Subscription Plan</h1>
 
         {/* Subscription Plans  */}
-        <div className="grid grid-cols-1 gap-5 mt-5 md:grid-cols-3 md:gap-5">
+        <div className="grid grid-cols-1 gap-5 mt-5 md:grid-cols-3 md:gap-5 px-3">
             {data.map((item, index) => (
                 <div key={index} className="border border-[var(--secondaryTheme)] 
                 shadow-[var(--secondaryTheme)] shadow-md rounded-md p-5 flex flex-col gap-3 cursor-pointer"
