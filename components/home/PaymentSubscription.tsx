@@ -44,8 +44,8 @@ const PaymentSubscription = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center md:px-10 py-5">
       {/* Heading  */}
-        <h1 className="text-[var(--primaryTheme)] text-center text-[27px] lg:text-[40px] md:text-[35px] font-[900]">
-            Choose Your Subscription Plan
+        <h1 className="text-[var(--primaryTheme)] text-center text-[27px] lg:text-[40px] md:text-[35px] font-[900]"> 
+          Choose Your Subscription Plan
         </h1>
 
       {/* Subscription Plans  */}
