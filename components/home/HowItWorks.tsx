@@ -1,21 +1,21 @@
 const data = [
   {
     number: 1,
-    title: "Register",
+    title: 'Register',
     description:
-      "Register an account with us to access our wide range of academic writing services.",
+      'Register an account with us to access our wide range of academic writing services.',
   },
   {
     number: 2,
-    title: "Choose Your Service",
+    title: 'Choose Your Service',
     description:
-      "Select from our variety of academic writing services tailored to your needs.",
+      'Select from our variety of academic writing services tailored to your needs.',
   },
   {
     number: 3,
-    title: "Get Your Work",
+    title: 'Get Your Work',
     description:
-      "Receive your completed academic work delivered to you on time.",
+      'Receive your completed academic work delivered to you on time.',
   },
 ];
 
@@ -32,20 +32,20 @@ const HowItWorks = () => {
           // Service Card
           <div
             key={index}
-            className="flex flex-row gap-2 h-[60px] md:flex-col lg:mx-auto"
+            className="flex flex-col gap-3 mt-3 md:gap-2 md:flex-col lg:mx-auto"
           >
             <div
-              className="bg-[var(--primaryTheme)] w-5 h-5 md:w-10 md:h-10 rounded-full 
-              flex items-center justify-center text-white font-[600] flex-shrink-0 text-[10px] md:mx-auto md:text-[15px]"
+              className="bg-[var(--primaryTheme)] w-10 h-10 md:w-10 md:h-10 rounded-full 
+              flex items-center justify-center text-white font-[600] flex-shrink-0  mx-auto md:text-[15px]"
             >
               {item.number}
             </div>
 
             <div className="md:flex md:flex-col md:gap-2 md:items-center md:justify-center">
-              <h1 className="text-[15px] md:text-[18px] lg:text-[20px] font-[700] text-[var(--primaryTheme)] md:text-center">
+              <h1 className="text-[19px] md:text-[18px] lg:text-[20px] font-[700] text-[var(--primaryTheme)] text-center">
                 {item.title}
               </h1>
-              <p className="text-[11px] md:text-center md:text-[13px] md:w-[210px] lg:w-[250px] lg:mt-1 font-[700] text-[var(--primaryTheme)]">
+              <p className="text-[12px] w-[300px] mx-auto text-center md:text-[13px] md:w-[210px] lg:w-[250px] lg:mt-1 font-[700] text-black">
                 {item.description}
               </p>
             </div>

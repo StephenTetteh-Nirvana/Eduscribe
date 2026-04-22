@@ -1,4 +1,7 @@
+"use client"
+
 import { BookText } from "lucide-react";
+import { motion } from "motion/react";
 
 const services = [
   {
@@ -26,9 +29,15 @@ const services = [
 const Services = () => {
   return (
     <div className="mt-15 py-5 md:px-10 w-full">
-      <h1 className="text-[32px] lg:text-[40px] md:text-[35px] text-center font-[900] text-[var(--primaryTheme)]">
+      <motion.h1
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={once}
+        transition={{ duration: 0.6 }}
+        className="text-[32px] lg:text-[40px] md:text-[35px] text-center font-[900] text-[var(--primaryTheme)]"
+      >
         What We Offer
-      </h1>
+      </motion.h1>
 
       {/* Services Cards  */}
       <section className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-5 px-5 mx-auto md:px-3">

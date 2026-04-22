@@ -53,8 +53,8 @@ const PaymentSubscription = () => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="border border-[var(--secondaryTheme)] 
-              shadow-[var(--secondaryTheme)] shadow-md rounded-md p-5 flex flex-col gap-3 cursor-pointer"
+            className="border border-[var(--accentTheme)] 
+            shadow-[var(--secondaryTheme)] shadow-md rounded-md p-5 flex flex-col gap-3 cursor-pointer"
           >
             <h1 className="text-[var(--accentTheme)] text-center text-[20px] font-[700]">
               {item.plan}
