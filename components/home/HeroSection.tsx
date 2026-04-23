@@ -1,11 +1,12 @@
 "use client"
 
+import Typewriter from 'typewriter-effect';
 import { motion } from "motion/react";
 import { Button } from "../ui/button";
-import { GraduationCap } from "lucide-react";
 import Image from "next/image";
 
 const HeroSection = () => {
+  
   return (
     <div className="relative w-full h-[100vh] md:h-[80vh] lg:h-screen">
       {/* Background Image  */} 
@@ -23,9 +24,19 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-[40px] md:text-[40px] lg:text-[60px]
-          text-center text-white"
+          text-center text-white flex items-center gap-2 font-[600]"
         >
-          Welcome to <span className="font-[900] text-[var(--secondaryTheme)]">EDUSCRIBE</span>
+          Are You  
+          <Typewriter
+            options={{
+              strings: ['A University Student ?', 'A Postgraduate Researcher ?', 'A Working Professional ?', 'A Corporate Institution ?'],
+              autoStart: true,
+              loop: true,
+              delay: 50,
+              deleteSpeed: 50,
+              wrapperClassName: 'text-[var(--secondaryTheme)] font-[900]',
+            }}
+          />
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0, y: -20 }}
