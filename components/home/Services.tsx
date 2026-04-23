@@ -28,7 +28,7 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="mt-15 py-5 md:px-10 w-full md:h-[50vh]">
+    <div className="mt-15 py-5 md:px-10 w-full">
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
