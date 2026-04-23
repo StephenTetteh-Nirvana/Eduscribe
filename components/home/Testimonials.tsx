@@ -7,16 +7,22 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-  useCarousel,
 } from "@/components/ui/carousel";
+import { motion } from "motion/react";
+import Image from "next/image";
 
 const Testimonials = () => {
   return (
     <div className="relative mt-15 md:mt-30 py-5 flex flex-col items-center justify-center">
       {/* Heading   */}
-      <h1 className="text-[var(--primaryTheme)] font-[900] text-[27px] lg:text-[40px] md:text-[35px]">
+      <motion.h1
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+        className="text-[var(--primaryTheme)] font-[900] text-[27px] lg:text-[40px] md:text-[35px]">
         Clients Testimonials
-      </h1>
+      </motion.h1>
 
       <Carousel className="w-[90%] py-5 mt-5">
         {/* Carousel Buttons  */}
@@ -31,11 +37,25 @@ const Testimonials = () => {
               key={index}
               className="basis-1/1 pl-1 md:basis-1/2 lg:basis-1/3"
             >
-              <div className="p-1">
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.85 }}
+                whileInView={{ opacity: 1, scale: 1}}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="p-1">
                 <Card className="rounded-md ring-0 bg-[var(--backgroundTheme)]">
                   <CardContent className="px-5 py-2">
                     {/* Client Image  */}
-                    <div className="w-15 h-15 mx-auto rounded-full border border-slate-400"></div>
+                    <div className="w-15 h-15 mx-auto flex items-center justify-center rounded-full border border-slate-400">
+                      <Image 
+                        src="/images/client-avatar.jpg"
+                        alt="Client Image"
+                        width={60}
+                        height={60}
+                        loading="eager"
+                        className="rounded-full w-full h-full object-cover object-center"
+                      />
+                    </div>
 
                     {/* Client Feedback  */}
                     <p className="w-full mt-3">
@@ -57,7 +77,7 @@ const Testimonials = () => {
                     </div>
                   </CardContent>
                 </Card>
-              </div>
+              </motion.div>
             </CarouselItem>
           ))}
         </CarouselContent>

@@ -18,6 +18,7 @@ const HeroSection = () => {
         loading="eager"
       />
 
+     {/* Text overlay with typewriter effect and CTA button  */}
       <div className="absolute inset-0 bg-black/60 w-full h-screen flex flex-col items-center justify-center">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
@@ -26,7 +27,9 @@ const HeroSection = () => {
           className="text-[30px] md:text-[40px] lg:text-[60px]
           text-center text-white flex flex-col md:flex-row items-center md:gap-2 font-[600]"
         >
-          Are You  
+          Are You 
+           
+          {/* Typewriter effect creation  */}
           <Typewriter
             options={{
               strings: ['A University Student ?', 'A Postgraduate Researcher ?', 'A Working Professional ?', 'A Corporate Institution ?'],

@@ -32,7 +32,8 @@ const Services = () => {
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.4 }}
         className="text-[32px] lg:text-[40px] md:text-[35px] text-center font-[900] text-[var(--primaryTheme)]"
       >
         What We Offer
@@ -41,7 +42,11 @@ const Services = () => {
       {/* Services Cards  */}
       <section className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-5 px-5 mx-auto md:px-3">
         {services.map((service, index) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85 }}
+            whileInView={{ opacity: 1, scale: 1}}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.4 }}
             key={index}
             className="border border-slate-200 rounded-md p-5 bg-[var(--backgroundTheme)]"
           >
@@ -57,7 +62,7 @@ const Services = () => {
                 {service.description}
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </section>
     </div>

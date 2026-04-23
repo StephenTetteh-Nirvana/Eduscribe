@@ -1,3 +1,7 @@
+"use client"
+
+import { motion } from "motion/react";
+
 const data = [
   {
     number: 1,
@@ -22,15 +26,24 @@ const data = [
 const HowItWorks = () => {
   return (
     <div className=" w-full mt-15 px-3 md:pl-10 py-5">
-      <h1 className="text-[var(--primaryTheme)] text-center text-[27px] lg:text-[40px] md:text-[35px] font-[900]">
+      <motion.h1 
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="text-[var(--primaryTheme)] text-center text-[27px] lg:text-[40px] md:text-[35px] font-[900]">
         Get Started With EDUSCRIBE
-      </h1>
+      </motion.h1>
 
       {/* Work Roadmap  */}
       <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-2 mt-5 lg:mt-10">
         {data.map((item, index) => (
-          // Service Card
-          <div
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85 }}
+            whileInView={{ opacity: 1, scale: 1}}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.4 }}
             key={index}
             className="flex flex-col gap-3 mt-3 md:gap-2 md:flex-col lg:mx-auto"
           >
@@ -49,7 +62,7 @@ const HowItWorks = () => {
                 {item.description}
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
