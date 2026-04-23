@@ -8,13 +8,13 @@ import Image from "next/image";
 const HeroSection = () => {
   
   return (
-    <div className="relative w-full h-[100vh] md:h-[80vh] lg:h-screen">
+    <div className="relative w-full h-screen">
       {/* Background Image  */} 
       <Image 
         src="/images/bannerImage.jpg"
         alt="Background"
         fill
-        className="relative object-cover object-center"
+        className="relative object-cover object-center h-screen w-full"
         loading="eager"
       />
 
@@ -23,8 +23,8 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-[40px] md:text-[40px] lg:text-[60px]
-          text-center text-white flex items-center gap-2 font-[600]"
+          className="text-[30px] md:text-[40px] lg:text-[60px]
+          text-center text-white flex flex-col md:flex-row items-center md:gap-2 font-[600]"
         >
           Are You  
           <Typewriter
