@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="flex flex-col gap-2 md:flex-1">
                 <div className="flex gap-2">
                   <GraduationCap color="white" size={40}/>
-                  <h1 className="text-[30px] md:text-[18px] lg:text-[30px] font-[900] text-center">EDUSCRIBE</h1>
+                  <h1 className="text-[30px] font-[900] text-center">EDUSCRIBE</h1>
                 </div>
               <p 
                 className="text-[14px] md:text-[16px] lg:text-[18px] font-[500] md:w-[80%]"
@@ -90,7 +90,7 @@ const Footer = () => {
             </div>
            
             {/* Bottom Copyright Info  */}
-            <p className="absolute bottom-3 w-full mt-5 text-center text-[12px] md:text-[14px] lg:text-[16px] font-[500]">© 2026 Eduscribe. All rights reserved.</p>
+            {/* <p className="absolute bottom-3 w-full mt-5 text-center text-[12px] md:text-[14px] lg:text-[16px] font-[500]">© 2026 Eduscribe. All rights reserved.</p> */}
         </div>
     )
 }
