@@ -32,7 +32,6 @@ const Services = () => {
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={once}
         transition={{ duration: 0.6 }}
         className="text-[32px] lg:text-[40px] md:text-[35px] text-center font-[900] text-[var(--primaryTheme)]"
       >

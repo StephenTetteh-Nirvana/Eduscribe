@@ -1,37 +1,36 @@
 "use client"
 
 import { motion } from "motion/react";
-import Image from "next/image";
 import { Button } from "../ui/button";
+import { GraduationCap } from "lucide-react";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <div className="relative bg-[var(--primaryTheme)] w-full h-[100vh] md:h-[80vh] lg:h-screen">
-      {/* Background Image */}
-      <Image
-        src="/images/BannnerImage.jpg"
-        width={500}
-        height={500}
-        alt="Hero Image"
-        quality={75}
+    <div className="relative w-full h-[100vh] md:h-[80vh] lg:h-screen">
+      {/* Background Image  */} 
+      <Image 
+        src="/images/bannerImage.jpg"
+        alt="Background"
+        fill
+        className="relative object-cover object-center"
         loading="eager"
-        className="relative w-full h-full object-cover object-center"
       />
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/60">
+      <div className="absolute inset-0 bg-black/60 w-full h-screen flex flex-col items-center justify-center">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           className="text-[40px] md:text-[40px] lg:text-[60px]
-          text-white font-[900] text-[var(--primaryTheme)] text-center"
+          text-center text-white"
         >
-          Welcome to Eduscribe
+          Welcome to <span className="font-[900] text-[var(--secondaryTheme)]">EDUSCRIBE</span>
         </motion.h1>
         <motion.p 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
           className="leading-relaxed text-[13px] text-white text-center w-[86%] md:w-[600px] lg:text-[18px]">
           Empowering learners and professionals
           with accesible, quality and ethical
@@ -39,9 +38,9 @@ const HeroSection = () => {
           technology.
         </motion.p>
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.7 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.8 }}
         >
           <Button
             className="border-none bg-[var(--secondaryTheme)] 
