@@ -1,4 +1,7 @@
+"use client"
+
 import { CircleCheckBig } from "lucide-react";
+import { motion } from "motion/react";
 
 const data = [
   {
@@ -42,16 +45,25 @@ const data = [
 
 const PaymentSubscription = () => {
   return (
-    <div className="w-full flex flex-col items-center justify-center md:px-10 py-5">
+    <div className=" bg-[var(--backgroundTheme)] w-full flex flex-col items-center justify-center md:px-10 py-5">
       {/* Heading  */}
-        <h1 className="text-[var(--primaryTheme)] text-center text-[27px] lg:text-[40px] md:text-[35px] font-[900]"> 
+        <motion.h1 
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="text-[var(--primaryTheme)] text-center text-[27px] lg:text-[40px] md:text-[35px] font-[900]"> 
           Choose Your Subscription Plan
-        </h1>
+        </motion.h1>
 
       {/* Subscription Plans  */}
       <div className="grid grid-cols-1 gap-5 mt-5 md:grid-cols-3 md:gap-5 px-3">
         {data.map((item, index) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85 }}
+            whileInView={{ opacity: 1, scale: 1}}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.4 }}
             key={index}
             className="border border-[var(--accentTheme)] 
             shadow-[var(--secondaryTheme)] shadow-md rounded-md p-5 flex flex-col gap-3 cursor-pointer"
@@ -70,7 +82,7 @@ const PaymentSubscription = () => {
                 <p className="text-[16px] text-slate-600">{feature}</p>
               </div>
             ))}
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
