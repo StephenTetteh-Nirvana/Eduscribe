@@ -25,11 +25,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("antialiased", nunito.className)}
+      className={`antialiased ${nunito.className}`}
     >
-      <body className="min-h-full">
-        <Navbar/>
-          {children}
+      <body>
+        <Navbar />
+        {children}
         <Footer />
       </body>
     </html>
