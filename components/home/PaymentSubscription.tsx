@@ -21,7 +21,7 @@ const data = [
       "Downloadable study materials (PDFs & notes)",
       "Progress tracking dashboard",
       "Weekly quizzes and assessments",
-      "Limited assignment feedback",
+        "Limited assignment feedback",
       "Community forum access",
       "Email support",
     ],
@@ -47,14 +47,14 @@ const PaymentSubscription = () => {
   return (
     <div className=" bg-[var(--backgroundTheme)] w-full flex flex-col items-center justify-center md:px-10 py-5">
       {/* Heading  */}
-        <motion.h1 
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-[var(--primaryTheme)] text-center text-[27px] lg:text-[40px] md:text-[35px] font-[900]"> 
-          Choose Your Subscription Plan
-        </motion.h1>
+      <motion.h1 
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+        className="text-[var(--primaryTheme)] text-center text-[27px] lg:text-[40px] md:text-[35px] font-[900]"> 
+        Choose Your Subscription Plan
+      </motion.h1>
 
       {/* Subscription Plans  */}
       <div className="grid grid-cols-1 gap-5 mt-5 md:grid-cols-3 md:gap-5 px-3">
