@@ -42,11 +42,8 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="leading-relaxed text-[13px] text-white text-center w-[86%] md:w-[600px] lg:text-[18px]">
-          Empowering learners and professionals
-          with accesible, quality and ethical
-          academic asssitance through innovative
-          technology.
+          className="leading-relaxed text-[15px] text-white text-center w-[86%] md:w-[700px] lg:w-[850px]  md:text-[20px]">
+          Connecting university students, working professionals, and corporate institutions with expert writers and researchers through a modern, user-friendly interface.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

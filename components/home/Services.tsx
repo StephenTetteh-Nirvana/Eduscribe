@@ -10,7 +10,7 @@ const services = [
       "We provide comprehensive academic writing support including essays, research papers, dissertations, literature reviews, and coursework tailored to meet academic standards and individual requirements.",
   },
   {
-    title: "Professional & Consulting Services",
+    title: "Consulting Services",
     description:
       "Expert guidance and consulting services for academic planning, research methodology, proposal development, and project structuring to help students and professionals achieve their goals efficiently.",
   },
@@ -50,10 +50,10 @@ const Services = () => {
             </div>
 
             <div className="mt-2">
-              <h1 className="text-[20px] md:text-[16px] font-[600] text-[var(--primary)]">
+              <h1 className="text-[20px] font-[600] text-[var(--primary)]">
                 {service.title}
               </h1>
-              <p className="text-[12px] md:mt-1 text-slate-600">
+              <p className="text-[12px] md:text-[15px] md:mt-1 text-slate-600">
                 {service.description}
               </p>
             </div>
