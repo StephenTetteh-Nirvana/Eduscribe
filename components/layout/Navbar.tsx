@@ -13,7 +13,7 @@ const Navbar = () => {
   const pathname = usePathname ()
   
   return (
-    <div className={`${pathname === "/login" && "hidden"}`}>
+    <div className={`${pathname === "/login" && "hidden" || pathname === "/register" && "hidden"}`}>
       <nav className="bg-white w-full border-b border-gray-300 px-5 py-3 flex items-center justify-between">
         <div className="flex justify-between items-center w-full"> 
           <div className="flex gap-2 items-center">

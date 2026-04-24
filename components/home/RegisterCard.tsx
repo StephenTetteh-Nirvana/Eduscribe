@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -14,8 +16,12 @@ import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import { GraduationCap } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 
-const LoginCard = () => {
+const RegisterCard = () => {
+    const [optionSelected,setOptionSelected] = useState("email")
+
+
     return (
         <Card className="w-full max-w-sm">
           {/* Navigate back to homepage  */}
@@ -27,9 +33,9 @@ const LoginCard = () => {
           </Link>
 
           <CardHeader>
-            <CardTitle>Login to your account</CardTitle>
+            <CardTitle>Create a new account</CardTitle>
             <CardDescription>
-              Enter your email below to login to your account
+              Enter your details below to create an account
             </CardDescription>
           </CardHeader>
 
@@ -37,7 +43,12 @@ const LoginCard = () => {
             <form>
               <div className="flex flex-col gap-6">
                 <div className="grid gap-2">
-                  <Label htmlFor="email">Email</Label>
+                  <div className={`${optionSelected === "email" ? "flex items-center justify-between" : "hidden"}`}>
+                    <Label htmlFor="email">Email</Label>
+                    <CardAction 
+                      className="text-[var(--primaryTheme)] font-[700] cursor-pointer">Use phone number instead ? 
+                    </CardAction>
+                  </div>
                   <Input
                     id="email"
                     type="email"
@@ -45,17 +56,15 @@ const LoginCard = () => {
                     required
                   />
                 </div>
-                <div className="grid gap-2">
-                  <div className="flex items-center">
-                    <Label htmlFor="password">Password</Label>
-                    <a
-                      href="#"
-                      className="ml-auto inline-block text-sm text-[var(--primaryTheme)]"
-                    >
-                      Forgot your password?
-                    </a>
+                <div className="grid gap-2 hidden">
+                  <div className={`${optionSelected === "phoneNumber" ? "flex items-center justify-between" : "hidden"}`}>
+                    <Label htmlFor="phoneNumber">Phone Number</Label>
+                    <CardAction 
+                      onClick={()=>setOptionSelected("phoneNumber")}
+                      className="text-[var(--primaryTheme)] font-[700] cursor-pointer">Use email instead ? 
+                    </CardAction>
                   </div>
-                  <Input id="password" type="password" required />
+                  <Input id="phoneNumber" type="phoneNumber" required />
                 </div>
               </div>
             </form>
@@ -63,7 +72,7 @@ const LoginCard = () => {
 
           <CardFooter className="flex-col gap-2">
             <Button type="submit" className="w-full py-5 cursor-pointer bg-[var(--secondaryTheme)]">
-              Login
+              Register
             </Button>
             <Button variant="outline" className="w-full flex items-center gap-2 cursor-pointer py-5">
               <FcGoogle />
@@ -75,9 +84,9 @@ const LoginCard = () => {
             </Button>
 
             {/* Link to sign up  */}
-            <h2 className="mt-3">Don't have an account? 
-                <Link href="/register">
-                  <span className="text-[var(--primaryTheme)] font-[700]"> Sign Up</span>
+            <h2 className="mt-3">Already got an account? 
+                <Link href="/login">
+                  <span className="text-[var(--primaryTheme)] font-[700]"> Sign In</span>
                 </Link>
             </h2>
           </CardFooter>
@@ -85,4 +94,4 @@ const LoginCard = () => {
     )
 }
 
-export default LoginCard;
+export default RegisterCard;
