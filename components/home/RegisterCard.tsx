@@ -74,7 +74,7 @@ const RegisterCard = () => {
                       <Button 
                         variant="ghost" 
                         className="cursor-pointer"
-                        onClick={()=>setOptionSelected("phoneNumber")}
+                        onClick={()=>setOptionSelected("email")}
                       >
                         Use email instead ? 
                       </Button>
