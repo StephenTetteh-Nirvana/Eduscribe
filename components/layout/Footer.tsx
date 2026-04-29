@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <div className="relative w-full bg-[linear-gradient(135deg,#1B4F72,#21618C,#2E86C1)] text-white py-5 flex flex-col items-start px-10 min-h-[50vh] md:flex-row md:gap-3">
+        <div className="relative w-full bg-[var(--primaryTheme)] text-white py-5 flex flex-col items-start px-10 min-h-[50vh] md:flex-row md:gap-3">
 
             {/* Title and Description  */}
             <div className="flex flex-col gap-2 md:flex-1">

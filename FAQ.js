@@ -19,27 +19,20 @@ export const items = [
   },
   {
     value: "item-4",
-    trigger: "What payment methods do you accept?",
+    trigger: "Can I collaborate with other users on projects?",
     content:
-      "We accept all major credit cards, PayPal, and bank transfers. All payments are processed securely through our payment partners.",
+      "Yes, you can invite collaborators to your projects, share documents, and work together in real time. Permissions can be customized for each user.",
   },
   {
     value: "item-5",
-    trigger: "What payment methods do you accept?",
+    trigger: "Does the platform support academic writing and citations?",
     content:
-      "We accept all major credit cards, PayPal, and bank transfers. All payments are processed securely through our payment partners.",
+      "Yes, we provide tools for structured writing, citation support, and formatting to help students and researchers manage academic work.",
   },
   {
     value: "item-6",
-    trigger: "What payment methods do you accept?",
+    trigger: "Can I publish or share my work publicly?",
     content:
-      "We accept all major credit cards, PayPal, and bank transfers. All payments are processed securely through our payment partners.",
-  },
-  {
-    value: "item-7",
-    trigger: "What payment methods do you accept?",
-    content:
-      "We accept all major credit cards, PayPal, and bank transfers. All payments are processed securely through our payment partners.",
+      "You can choose to keep your work private, share it with specific people, or publish it publicly to build your professional portfolio.",
   },
 ]
-
